@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: zilongzhang
-  Date: 2020/12/31
-  Time: 11:26 下午
+  Date: 2021/1/1
+  Time: 1:57 下午
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -14,18 +14,18 @@
 <body>
 <h1>sb</h1>
 
-<form action="update" method="post">
+<form action="insert" method="post">
 
-<%--    new name:<input type="text" name="name" required>--%>
-<%--    <br>--%>
-<%--    new news:<textarea cols="8" rows="20" name="news">介绍一下自己</textarea>--%>
+    <%--    new name:<input type="text" name="name" required>--%>
+    <%--    <br>--%>
+    <%--    new news:<textarea cols="8" rows="20" name="news">介绍一下自己</textarea>--%>
 
-<%--    <br>--%>
+    <%--    <br>--%>
     <div class="input-group input-group-lg">
         <div class="input-group-prepend">
             <span class="input-group-text" id="inputGroup-sizing-lg">编辑新的标题</span>
         </div>
-        <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" name="name">
+        <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" name="addname">
     </div>
     <div class="input-group">
         <div class="input-group-prepend">
@@ -38,3 +38,4 @@
 
 </body>
 </html>
+

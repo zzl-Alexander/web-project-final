@@ -20,7 +20,7 @@ public class User {
         this.name = name;
         this.insertTime = insertTime;
     }
-    public User(int id, String name, Date insertTime,String news) {
+    public User(int id, String name, String news, Date insertTime) {
         this.id = id;
         this.name = name;
         this.insertTime = insertTime;

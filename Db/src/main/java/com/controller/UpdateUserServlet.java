@@ -20,11 +20,13 @@ public class UpdateUserServlet extends HttpServlet {
         int id= (int) req.getSession().getAttribute("cut");
 
         String newName = req.getParameter("name");
-        String sql = "update user set name=? where id=?";
+        String newNews = req.getParameter("news");
+        String sql = "update user set name=?,news=? where id=?";
         try(Connection conn = DataSourceUtils.getConnection();
             PreparedStatement st = conn.prepareStatement(sql)) {
             st.setString(1, newName);
-            st.setInt(2, id);
+            st.setString(2, newNews);
+            st.setInt(3, id);
             st.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();

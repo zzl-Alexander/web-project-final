@@ -19,16 +19,6 @@
 <hr>
 <h3>Update</h3>
 修改指定用户
-<%--<form action="update" method="post">--%>
-<%--    <select name="uid">--%>
-<%--        <c:forEach items="${users }" var="u">--%>
-<%--            <option value="${u.id }">${u.name }</option>--%>
-<%--        </c:forEach>--%>
-<%--    </select>--%>
-<%--    new name:<input type="text" name="name" required>--%>
-<%--    <br>--%>
-<%--    <button type="submit">提交</button>--%>
-<%--</form>--%>
 <form action="write" method="post">
     <select name="uid">
         <c:forEach items="${users }" var="u">
@@ -42,10 +32,7 @@
 <hr>
 <h3>Insert</h3>
 添加指定用户
-
-<form action="insert" method="post">
-    new name:<input type="text" name="addname" required>
-    <br>
+<form action="insertwrite" method="post">
 <%--    <input type="submit" value="提交">--%>
     <button type="submit">添加</button>
 </form>

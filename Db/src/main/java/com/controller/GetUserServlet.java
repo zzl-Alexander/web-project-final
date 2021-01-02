@@ -28,6 +28,7 @@ public class GetUserServlet extends HttpServlet {
                     user = new User();
                     user.setId(rs.getInt("id"));
                     user.setName(rs.getString("name"));
+                    user.setNews(rs.getString("news"));
                     user.setInsertTime(rs.getTimestamp("inserttime"));
                 }
             }

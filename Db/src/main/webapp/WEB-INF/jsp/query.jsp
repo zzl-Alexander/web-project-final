@@ -5,10 +5,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        h2,h5{
+            text-align: center;
+        }
+        .news{
+            font-size: 20px;
+            text-indent: 2em;
+        }
+    </style>
 </head>
 <body>
-用户id：${user.id } <br>
-用户名称：${user.name } <br>
-注册时间：${user.insertTime}
+<h2>新闻名称：${user.name }</h2>
+<br>
+<h5>发布时间：${user.insertTime}</h5>
+<br>
+<div class="news">
+    ${user.news}
+</div>
 </body>
 </html>

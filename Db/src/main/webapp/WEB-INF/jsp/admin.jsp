@@ -164,9 +164,13 @@
         /*.lef{*/
         /*    width: 50%;*/
         /*}*/
+        .right{
+            margin-left: auto;
+        }
     </style>
 </head>
 <body>
+
 <div class="header">
     <div class="nav">
         <div class="item">
@@ -180,7 +184,14 @@
             <!--                <li><a href="">学校概况</a></li>-->
             <!--            </ul>-->
         </div>
-
+        <div class="item fontsize">
+            <div><a href="">专业相关</a></div>
+            <!--二级导航-->
+            <ul class="fontsize">
+                <li><a href="Child/introdu/1.html">专业介绍</a></li>
+                <li><a href="Child/introdu/2.html">专业方向</a></li>
+            </ul>
+        </div>
         <div class="item fontsize">
             <div><a href="">师资团队</a></div>
             <!--二级导航-->
@@ -198,7 +209,14 @@
                 <li><a href="Child/experiment/2.html">925移动开发实验室</a></li>
             </ul>
         </div>
+        <div class="item fontsize">
+            <div><a href="Child/introdu/3.html">就业指导</a></div>
+        </div>
+        <div class="item fontsize right">
+            <div><a href="login">后台管理</a></div>
+        </div>
     </div>
+
 </div>
 <div class="main">
     <table>
@@ -271,12 +289,12 @@
 <%--    </c:forEach>--%>
 <%--</ul>--%>
 
-<div class="itemul">
-    <c:forEach items="${Rusers }" var="u">
-        <a href="getuser?uid=${u.id}" target="_blank"><div class="lef"> <fmt:formatDate pattern="yyyy-MM-dd" value="${u.insertTime}"></fmt:formatDate></div><div>${u.name } </div> </a>
-    </c:forEach>
+<%--<div class="itemul">--%>
+<%--    <c:forEach items="${Rusers }" var="u">--%>
+<%--        <a href="getuser?uid=${u.id}" target="_blank"><div class="lef"> <fmt:formatDate pattern="yyyy-MM-dd" value="${u.insertTime}"></fmt:formatDate></div><div>${u.name } </div> </a>--%>
+<%--    </c:forEach>--%>
 
-</div>
+<%--</div>--%>
 <hr>
 <h2>Query</h2>
 <ul>

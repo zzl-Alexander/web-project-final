@@ -103,9 +103,12 @@
             background-color: aliceblue;
         }
         .itemul{
-            padding-left: 20px;
+            padding: 20px;
             margin-top: 30px;
             width: 50%;
+            /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+        }
+        .itemul:hover{
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
         .itemul a{
@@ -124,7 +127,7 @@
         }
         .lef{
             width: 40%;
-            color: red;
+            color: darkcyan;
         }
         .hh{
             margin: 0 10px;
@@ -136,6 +139,9 @@
             text-align: center;
             background-color: darkcyan;
             color: white;
+        }
+        #footer-img{
+            width: 100%;
         }
     </style>
 </head>
@@ -149,21 +155,28 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="Child/introdu/1.html" target="_blank">专业介绍 <span class="sr-only">(current)</span></a>
-            </li>
+
             <li class="nav-item dropdown mynav">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    专业相关
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="Child/introdu/1.html" target="_blank">专业介绍</a>
+                    <a class="dropdown-item" href="Child/introdu/2.html" target="_blank">专业方向</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown mynav">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown11" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     教师队伍
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="Child/Teacher/1.html" target="_blank">教授</a>
-                    <a class="dropdown-item" href="#" target="_blank">副教授</a>
-                    <a class="dropdown-item" href="#" target="_blank">讲师</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#" target="_blank">Something else here</a>
+                    <a class="dropdown-item" href="Child/Teacher/2.html" target="_blank">副教授</a>
+                    <a class="dropdown-item" href="Child/Teacher/3.html" target="_blank">讲师</a>
+
                 </div>
             </li>
+
             <li class="nav-item dropdown mynav">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdow" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     实验室
@@ -171,20 +184,11 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="Child/experiment/1.html">923创新实验室</a>
                     <a class="dropdown-item" href="Child/experiment/2.html">925移动开发实验室</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
+
                 </div>
             </li>
-            <li class="nav-item dropdown mynav">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    就业指导
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">研究生教育</a>
-                    <a class="dropdown-item" href="#">本科生教育</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
+            <li class=" dropdown mynav">
+                <a href="Child/introdu/3.html" class="nav-link " target="_blank">就业指导</a>
             </li>
             <li class=" dropdown mynav">
                 <a href="Read" class="nav-link " target="_blank">新闻公告</a>
@@ -240,7 +244,7 @@
             <div style="display: flex">
                 <img src="https://www.nefu.edu.cn/2019images/icon002.png" style="width: 50px;height: 50px">
                 <div class="kk">
-                    新闻公告
+                    最新新闻
                 </div>
             </div>
             <hr>
@@ -253,6 +257,38 @@
                 <%--            </c:forEach>--%>
             </div>
         </div>
+        <div class="itemul">
+            <div style="display: flex">
+                <img src="https://www.nefu.edu.cn/2019images/icon002.png" style="width: 50px;height: 50px">
+                <div class="kk">
+                    最新公告
+                </div>
+            </div>
+            <hr>
+            <div class="ulnew">
+                <c:forEach items="${Nousers }" var="u">
+                    <a href="getuser?uid=${u.id}" target="_blank"><div class="lef"> <fmt:formatDate pattern="yyyy-MM-dd" value="${u.insertTime}"></fmt:formatDate></div><div>${u.name } </div> </a>
+                </c:forEach>
+                <%--            <c:forEach items="${users }" var="u">--%>
+                <%--                <li><a href="getuser?uid=${u.id}">${u.name }</a></li>--%>
+                <%--            </c:forEach>--%>
+            </div>
+        </div>
+<%--        <div class="item">--%>
+<%--            <img src="asserts/mod/img_44.png" class="wid" alt="...">--%>
+<%--            <p>--%>
+<%--                学校上下一盘棋，齐心合力，扎实推动文明校园创建工作。加强政治引领，开展“不忘初心、牢记使命”主题教育，认真学习党的创新理论和精神文明建设政策文件，为实际工作提供遵循；持续深入开展学校文明创建工作，营造出风清气正、团结向上、奋发有为的良好氛围.--%>
+<%--            </p>--%>
+<%--        </div>--%>
+<%--        <div class="item">--%>
+<%--            <img src="asserts/mod/img_55.png" class="wid" alt="...">--%>
+<%--            <p>--%>
+<%--                第十届中国教育机器人大赛日前在广东省东莞市松山湖光大We谷隆重举行。经过两天激烈角逐，我校参赛学子获得全国一等奖2项、全国二等奖5项，全国三等奖3项的优异成绩。--%>
+<%--                人工智能学会主办，松山湖国际机器人研究院承办。--%>
+<%--            </p>--%>
+<%--        </div>--%>
+    </div>
+    <div class="context">
         <div class="item">
             <img src="asserts/mod/img_44.png" class="wid" alt="...">
             <p>
@@ -264,22 +300,6 @@
             <p>
                 第十届中国教育机器人大赛日前在广东省东莞市松山湖光大We谷隆重举行。经过两天激烈角逐，我校参赛学子获得全国一等奖2项、全国二等奖5项，全国三等奖3项的优异成绩。
                 人工智能学会主办，松山湖国际机器人研究院承办。
-            </p>
-        </div>
-    </div>
-    <div class="context">
-        <div class="item">
-            <img src="asserts/mod/img_0.png" class="wid" alt="...">
-            <p>
-                北京时间11月23日凌晨，2020年国际遗传工程机器设计大赛（International Genetic Engineering Machine Competition，简称iGEM）落下帷幕，我校团队凭借“生物探雷工兵”项目喜获金奖，这也是林大学子在该项比赛中连续第四年获得金奖。
-
-            </p>
-        </div>
-        <div class="item">
-            <img src="asserts/mod/img_11.png" class="wid" alt="...">
-            <p>
-                北京时间11月23日凌晨，2020年国际遗传工程机器设计大赛（International Genetic Engineering Machine Competition，简称iGEM）落下帷幕，我校团队凭借“生物探雷工兵”项目喜获金奖，这也是林大学子在该项比赛中连续第四年获得金奖。
-
             </p>
         </div>
         <div class="item">

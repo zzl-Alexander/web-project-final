@@ -21,6 +21,8 @@ public class ReadNewsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<User> Rusers = new ArrayList<>();
+        List<User> Nousers = new ArrayList<>();
+        List<User> users = new ArrayList<>();
         String sql = "select * from user";
         try(Connection conn = DataSourceUtils.getConnection();
             PreparedStatement st = conn.prepareStatement(sql);
@@ -28,12 +30,20 @@ public class ReadNewsServlet extends HttpServlet {
             int cnt=0;
             while (rs.next()) {
                 User user = new User(rs.getInt("id"), rs.getString("name"),rs.getString("news") ,rs.getTimestamp("inserttime"));
+                if(cnt<=5)
                 Rusers.add(user);
+                if(cnt>5&&cnt<=10)
+                Nousers.add(user);
+                cnt++;
+                users.add(user);
             }
+
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+        req.setAttribute("users", users);
         req.setAttribute("Rusers", Rusers);
+        req.setAttribute("Nousers", Nousers);
         req.getRequestDispatcher("/WEB-INF/jsp/Read.jsp")
                 .forward(req, resp);
     }

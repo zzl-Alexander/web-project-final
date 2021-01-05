@@ -9,10 +9,23 @@
 <html>
 <head>
     <title>Title</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .ts{
+            border: none;
+            background-color: green;
+            color: white;
+            padding: 10px 25px;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 8px;
+        }
+        .ts:hover{
+            background-color: gray;
+        }
+    </style>
 </head>
 <body>
-<h1>sb</h1>
 
 <form action="insert" method="post">
 
@@ -33,7 +46,7 @@
         </div>
         <textarea class="form-control" aria-label="With textarea" rows="5" name="news"></textarea>
     </div>
-    <button type="submit">提交</button>
+        <button type="submit" class="ts">添加</button>
 </form>
 
 </body>

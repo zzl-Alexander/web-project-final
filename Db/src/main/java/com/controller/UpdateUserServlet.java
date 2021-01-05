@@ -31,6 +31,6 @@ public class UpdateUserServlet extends HttpServlet {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        resp.sendRedirect(req.getContextPath()+ "/index");
+        resp.sendRedirect(req.getContextPath()+ "/admin");
     }
 }

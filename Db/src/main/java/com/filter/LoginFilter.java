@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebFilter("/index")
+@WebFilter("/admin")
 public class LoginFilter extends HttpFilter {
     private List<String> excludes = List.of("/login","/Main");
 

@@ -14,15 +14,15 @@ import java.io.IOException;
 public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/WEB-INF/jsp/login.jsp")
-                .forward(req,resp);
-//        Object user = req.getSession().getAttribute("administrator");
-//        if(user != null){
-//            resp.sendRedirect(req.getContextPath()+"/index");
-//        }else {
-//            req.getRequestDispatcher("/WEB-INF/jsp/login.jsp")
-//                    .forward(req,resp);
-//        }
+//        req.getRequestDispatcher("/WEB-INF/jsp/login.jsp")
+//                .forward(req,resp);
+        Object user = req.getSession().getAttribute("administrator");
+        if(user != null){
+            resp.sendRedirect(req.getContextPath()+"/admin");
+        }else {
+            req.getRequestDispatcher("/WEB-INF/jsp/login.jsp")
+                    .forward(req,resp);
+        }
     }
 
     @Override
@@ -30,10 +30,10 @@ public class LoginServlet extends HttpServlet {
         String administratorName = req.getParameter("administratorName");
         String password = req.getParameter("pwd");
         String url=req.getContextPath();
-        if("1".equals(administratorName)&&"1".equals(password)){
+        if("admin".equals(administratorName)&&"admin".equals(password)){
             Administrator u=new Administrator("王小明");
             req.getSession().setAttribute("administrator",u);
-            url+="/index";
+            url+="/admin";
             resp.sendRedirect(url);
         }else{
 //            url+="/Main";

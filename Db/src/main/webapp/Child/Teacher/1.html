@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        ul,li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        .fontsize{
+            font-size: 25px;
+            text-align: center;
+        }
+        /*整个导航栏*/
+        .nav{
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: darkcyan;
+        }
+        /*导航的每一块*/
+        .item{
+            text-align: center;
+        }
+        .nav a{
+            display: block;
+            padding: 15px 25px;
+            text-decoration: none;
+            background-color: darkcyan;
+            color: white;
+        }
+
+        ul{
+            display: none;
+            position: absolute;
+        }
+        .nav ul a:hover{
+            background-color: lightgrey;
+        }
+        .item:hover ul{
+            color: white;
+            display: block;
+        }
+
+        .footer{
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            background-color: darkcyan;
+            color: white;
+        }
+        .team{
+            padding: 50px;
+            display: flex;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .left{
+            width: 20%;
+        }
+        .im{
+            width: 100%;
+        }
+        .name{
+            font-size: 20px;
+            text-align: center;
+        }
+        .in{
+            width: 80%;
+            font-size: 20px;
+            text-indent: 2em;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="nav">
+        <div class="item">
+            <img src="../../asserts/logo.jpg">
+        </div>
+        <div class="item fontsize">
+            <div style="text-align: center"><a href="../../Main">主页</a></div>
+<!--            &lt;!&ndash;二级导航&ndash;&gt;-->
+<!--            <ul class="fontsize" style="background-color: #60b9db">-->
+<!--                <li><a href="">学校概况</a></li>-->
+<!--                <li><a href="">学校概况</a></li>-->
+<!--            </ul>-->
+        </div>
+
+        <div class="item fontsize">
+            <div><a href="">师资团队</a></div>
+            <!--二级导航-->
+            <ul class="fontsize">
+                <li><a href="1.html">教授</a></li>
+                <li><a href="2.html">副教授</a></li>
+                <li><a href="3.html">讲师</a></li>
+            </ul>
+        </div>
+        <div class="item fontsize">
+            <div><a href="">实验室</a></div>
+            <!--二级导航-->
+            <ul class="fontsize">
+                <li><a href="../experiment/1.html">923创新实验室</a></li>
+                <li><a href="../experiment/2.html">925移动开发实验室</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="team">
+        <div class="left">
+            <img src="../../asserts/Teacher/img.png" alt="苏健民" class="im">
+            <div class="name">苏健民</div>
+        </div>
+        <div class="in">苏健民，教授，硕士，硕士生导师，软件工程一级学科带头人，省计算机学会嵌入式专委会委员。主要研究方向：自动控制、信号与信息处理。主持或参加科研、教学项目11项，科研与教学获奖11项，出版教材2部，发表论文32篇。<br><br>Email：1216649568@qq.com</div>
+    </div>
+
+</div>
+<div class="footer">
+    <p>东北林业大学<br>
+        2018级软件工程3班张子龙</p>
+</div>
+
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+
+</script>
+</body>
+</html>

@@ -25,7 +25,7 @@
             <option value="${u.id }">${u.name }</option>
         </c:forEach>
     </select>
-<%--    new name:<input type="text" name="name" required>--%>
+    <%--    new name:<input type="text" name="name" required>--%>
     <br>
     <button type="submit">编辑</button>
 </form>
@@ -33,7 +33,7 @@
 <h3>Insert</h3>
 添加指定用户
 <form action="insertwrite" method="post">
-<%--    <input type="submit" value="提交">--%>
+    <%--    <input type="submit" value="提交">--%>
     <button type="submit">添加</button>
 </form>
 <hr>

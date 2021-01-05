@@ -18,7 +18,9 @@
 <body>
 <h2>新闻名称：${user.name }</h2>
 <br>
-<h5>发布时间：${user.insertTime}</h5>
+<h5>发布时间：
+    <fmt:formatDate pattern="yyyy-MM-dd" value="${user.insertTime}"></fmt:formatDate>
+</h5>
 <br>
 <div class="news">
     ${user.news}

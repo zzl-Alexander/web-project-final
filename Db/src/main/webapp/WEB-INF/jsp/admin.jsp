@@ -167,6 +167,9 @@
         .right{
             margin-left: auto;
         }
+        tbody tr:hover{
+            background-color: #86cfda;
+        }
     </style>
 </head>
 <body>

@@ -90,10 +90,12 @@
             /*border: 1px solid red;*/
             margin: 2.5%;
             width: 20%;
+            transition: 1000ms;
         }
         .item:hover{
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            transition: 500ms;
+            transition: 1000ms;
+            transform: translate(0,-5px);
         }
 
         .wid{
@@ -148,7 +150,7 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light " style="background-color: darkcyan" >
-    <a class="navbar-brand" href="https://www.nefu.edu.cn/"><img src="asserts/logo.jpg"></a>
+    <a class="navbar-brand" href="Main"><img src="asserts/logo.jpg"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -242,7 +244,7 @@
     <div class="context">
         <div class="itemul">
             <div style="display: flex">
-                <img src="https://www.nefu.edu.cn/2019images/icon002.png" style="width: 50px;height: 50px">
+                <img src="https://www.nefu.edu.cn/2019images/icon001.png" style="width: 50px;height: 50px">
                 <div class="kk">
                     最新新闻
                 </div>
@@ -256,6 +258,49 @@
                 <%--                <li><a href="getuser?uid=${u.id}">${u.name }</a></li>--%>
                 <%--            </c:forEach>--%>
             </div>
+        </div>
+        <div class="item">
+            <img src="asserts/mod/img_44.png" class="wid" alt="...">
+            <p>
+                学校上下一盘棋，齐心合力，扎实推动文明校园创建工作。加强政治引领，开展“不忘初心、牢记使命”主题教育，认真学习党的创新理论和精神文明建设政策文件，为实际工作提供遵循；持续深入开展学校文明创建工作，营造出风清气正、团结向上、奋发有为的良好氛围.
+            </p>
+        </div>
+        <div class="item">
+            <img src="asserts/mod/img_55.png" class="wid" alt="...">
+            <p>
+                第十届中国教育机器人大赛日前在广东省东莞市松山湖光大We谷隆重举行。经过两天激烈角逐，我校参赛学子获得全国一等奖2项、全国二等奖5项，全国三等奖3项的优异成绩。
+                人工智能学会主办，松山湖国际机器人研究院承办。
+            </p>
+        </div>
+<%--        <div class="item">--%>
+<%--            <img src="asserts/mod/img_44.png" class="wid" alt="...">--%>
+<%--            <p>--%>
+<%--                学校上下一盘棋，齐心合力，扎实推动文明校园创建工作。加强政治引领，开展“不忘初心、牢记使命”主题教育，认真学习党的创新理论和精神文明建设政策文件，为实际工作提供遵循；持续深入开展学校文明创建工作，营造出风清气正、团结向上、奋发有为的良好氛围.--%>
+<%--            </p>--%>
+<%--        </div>--%>
+<%--        <div class="item">--%>
+<%--            <img src="asserts/mod/img_55.png" class="wid" alt="...">--%>
+<%--            <p>--%>
+<%--                第十届中国教育机器人大赛日前在广东省东莞市松山湖光大We谷隆重举行。经过两天激烈角逐，我校参赛学子获得全国一等奖2项、全国二等奖5项，全国三等奖3项的优异成绩。--%>
+<%--                人工智能学会主办，松山湖国际机器人研究院承办。--%>
+<%--            </p>--%>
+<%--        </div>--%>
+    </div>
+    <div class="context">
+
+        <div class="item">
+            <img src="asserts/mod/img_22.png" class="wid" alt="...">
+            <p>
+                2月31日，在黑龙江省林业和草原局七楼会议室，我校与黑龙江省森林植物园签署了科研合作协议。黑龙江省林草局党组书记、局长王东旭，二级巡视员孙永刚，省森林植物园主任苏世河、副主任李洪林，我校李斌校长、刘守新副校长出席签约仪式。
+
+                李斌校长感谢省林草局对东林发展的大力支持。
+            </p>
+        </div>
+        <div class="item">
+            <img src="asserts/mod/img_33.png" class="wid" alt="...">
+            <p>
+                10月27日晚，学校在新体育馆举办抗疫精神主题讲座。全国卫生健康系统新冠肺炎疫情防控工作先进个人、全国优秀共产党员、黑龙江省第一批援鄂医疗队哈医大二院医疗队队长、哈尔滨医科大学附属第二医院重症医学科主任王洪亮教授做了题为《白袍加身 一场必胜的战役》的讲座。
+            </p>
         </div>
         <div class="itemul">
             <div style="display: flex">
@@ -273,48 +318,6 @@
                 <%--                <li><a href="getuser?uid=${u.id}">${u.name }</a></li>--%>
                 <%--            </c:forEach>--%>
             </div>
-        </div>
-<%--        <div class="item">--%>
-<%--            <img src="asserts/mod/img_44.png" class="wid" alt="...">--%>
-<%--            <p>--%>
-<%--                学校上下一盘棋，齐心合力，扎实推动文明校园创建工作。加强政治引领，开展“不忘初心、牢记使命”主题教育，认真学习党的创新理论和精神文明建设政策文件，为实际工作提供遵循；持续深入开展学校文明创建工作，营造出风清气正、团结向上、奋发有为的良好氛围.--%>
-<%--            </p>--%>
-<%--        </div>--%>
-<%--        <div class="item">--%>
-<%--            <img src="asserts/mod/img_55.png" class="wid" alt="...">--%>
-<%--            <p>--%>
-<%--                第十届中国教育机器人大赛日前在广东省东莞市松山湖光大We谷隆重举行。经过两天激烈角逐，我校参赛学子获得全国一等奖2项、全国二等奖5项，全国三等奖3项的优异成绩。--%>
-<%--                人工智能学会主办，松山湖国际机器人研究院承办。--%>
-<%--            </p>--%>
-<%--        </div>--%>
-    </div>
-    <div class="context">
-        <div class="item">
-            <img src="asserts/mod/img_44.png" class="wid" alt="...">
-            <p>
-                学校上下一盘棋，齐心合力，扎实推动文明校园创建工作。加强政治引领，开展“不忘初心、牢记使命”主题教育，认真学习党的创新理论和精神文明建设政策文件，为实际工作提供遵循；持续深入开展学校文明创建工作，营造出风清气正、团结向上、奋发有为的良好氛围.
-            </p>
-        </div>
-        <div class="item">
-            <img src="asserts/mod/img_55.png" class="wid" alt="...">
-            <p>
-                第十届中国教育机器人大赛日前在广东省东莞市松山湖光大We谷隆重举行。经过两天激烈角逐，我校参赛学子获得全国一等奖2项、全国二等奖5项，全国三等奖3项的优异成绩。
-                人工智能学会主办，松山湖国际机器人研究院承办。
-            </p>
-        </div>
-        <div class="item">
-            <img src="asserts/mod/img_22.png" class="wid" alt="...">
-            <p>
-                2月31日，在黑龙江省林业和草原局七楼会议室，我校与黑龙江省森林植物园签署了科研合作协议。黑龙江省林草局党组书记、局长王东旭，二级巡视员孙永刚，省森林植物园主任苏世河、副主任李洪林，我校李斌校长、刘守新副校长出席签约仪式。
-
-                李斌校长感谢省林草局对东林发展的大力支持。
-            </p>
-        </div>
-        <div class="item">
-            <img src="asserts/mod/img_33.png" class="wid" alt="...">
-            <p>
-                10月27日晚，学校在新体育馆举办抗疫精神主题讲座。全国卫生健康系统新冠肺炎疫情防控工作先进个人、全国优秀共产党员、黑龙江省第一批援鄂医疗队哈医大二院医疗队队长、哈尔滨医科大学附属第二医院重症医学科主任王洪亮教授做了题为《白袍加身 一场必胜的战役》的讲座。学校行政教工党支部书记培训班学员、党校第44期预备党员培训班学员及2020级本科生共6000余人参加讲座。讲座由党委学工部部长王博主持。
-            </p>
         </div>
     </div>
 </div>

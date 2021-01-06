@@ -68,6 +68,11 @@
         }
 
         /*以上是导航*/
+
+        .content{
+            text-align: center;
+        }
+
         .itemul{
             padding-left: 20px;
             margin-top: 30px;
@@ -149,11 +154,13 @@
     </div>
 
 </div>
-<div class="itemul">
-    <c:forEach items="${users }" var="u">
-        <a href="getuser?uid=${u.id}" target="_blank"><div class="lef"> <fmt:formatDate pattern="yyyy-MM-dd" value="${u.insertTime}"></fmt:formatDate></div><div>${u.name } </div> </a>
-    </c:forEach>
+<div class="content">
+    <div class="itemul">
+        <c:forEach items="${users }" var="u">
+            <a href="getuser?uid=${u.id}" target="_blank"><div class="lef"> <fmt:formatDate pattern="yyyy-MM-dd" value="${u.insertTime}"></fmt:formatDate></div><div>${u.name } </div> </a>
+        </c:forEach>
 
+    </div>
 </div>
 </body>
 </html>

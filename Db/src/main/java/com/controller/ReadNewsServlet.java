@@ -30,9 +30,9 @@ public class ReadNewsServlet extends HttpServlet {
             int cnt=0;
             while (rs.next()) {
                 User user = new User(rs.getInt("id"), rs.getString("name"),rs.getString("news") ,rs.getTimestamp("inserttime"));
-                if(cnt<=5)
+                if(cnt<5)
                 Rusers.add(user);
-                if(cnt>5&&cnt<=10)
+                if(cnt>=5&&cnt<10)
                 Nousers.add(user);
                 cnt++;
                 users.add(user);

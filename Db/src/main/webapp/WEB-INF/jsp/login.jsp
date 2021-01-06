@@ -13,6 +13,10 @@
     <title>Title</title>
     <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        body{
+            background-color: darkcyan;
+
+        }
         .but{
             display: flex;
             justify-content: center;
@@ -32,6 +36,10 @@
             margin: 10px 25%;
             border-radius: 5px;
             background-color: lightgrey;
+            height: 50px;
+            align-content: center;
+            padding: 8px 0;
+            font-size: 20px;
         }
         .bbut:hover{
             background-color: gray;
@@ -39,13 +47,13 @@
     </style>
 </head>
 <body>
-<a class="navbar-brand" href="https://www.nefu.edu.cn/"><img src="asserts/logo.jpg"></a>
+<a class="navbar-brand" href=""><img src="asserts/logo.jpg"></a>
 <form action="login" method="post">
     <div class="input-group flex-nowrap but">
         <div class="input-group-prepend item">
             <div class="input-group-text cha" >用 户 名</div>
         </div>
-        <input name="administratorName" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+        <input name="administratorName" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping" value="admin">
     </div>
     <div class="input-group flex-nowrap but">
         <div class="input-group-prepend item">

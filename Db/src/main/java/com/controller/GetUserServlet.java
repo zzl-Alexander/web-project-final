@@ -30,6 +30,7 @@ public class GetUserServlet extends HttpServlet {
                     user.setName(rs.getString("name"));
                     user.setNews(rs.getString("news"));
                     user.setInsertTime(rs.getTimestamp("inserttime"));
+                    user.setPhoto(rs.getString("image"));
                 }
             }
         } catch (SQLException throwables) {

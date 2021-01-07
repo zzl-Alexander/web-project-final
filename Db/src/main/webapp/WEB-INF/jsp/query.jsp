@@ -25,5 +25,8 @@
 <div class="news">
     ${user.news}
 </div>
+<div class="img-container" style="width: 100% ; margin: 0 auto">
+    <img src="data:image/png;base64,${user.photo}" alt="" >
+</div>
 </body>
 </html>

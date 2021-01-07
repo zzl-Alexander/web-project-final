@@ -43,14 +43,15 @@
 <p>
     ${upuser.news}
 </p>
-
-<form action="update" method="post">
-
-<%--    new name:<input type="text" name="name" required>--%>
-<%--    <br>--%>
-<%--    new news:<textarea cols="8" rows="20" name="news">介绍一下自己</textarea>--%>
-
-<%--    <br>--%>
+<h2>
+    原图片：
+</h2>
+<p>
+<div class="img-container" style="width: 100%">
+    <img src="data:image/png;base64,${upuser.photo}" alt="" >
+</div>
+</p>
+<form action="update" method="post" enctype="multipart/form-data">
     <div class="input-group input-group-lg">
         <div class="input-group-prepend">
             <span class="input-group-text" id="inputGroup-sizing-lg">编辑新的标题</span>
@@ -64,6 +65,12 @@
         <textarea class="form-control" aria-label="With textarea" rows="5" name="news"></textarea>
     </div>
 <%--    <button type="submit">提交</button>--%>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <input type="file" class="form-control-file" id="inputImage" accept="image/png,image/jpg,image/gif" name="photoo" required>
+        </div>
+
+    </div>
     <button type="submit" class="ts">修改</button>
 </form>
 

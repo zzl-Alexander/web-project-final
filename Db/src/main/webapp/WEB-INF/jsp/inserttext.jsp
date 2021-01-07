@@ -27,13 +27,8 @@
 </head>
 <body>
 
-<form action="insert" method="post">
+<form action="insert" method="post" enctype="multipart/form-data">
 
-    <%--    new name:<input type="text" name="name" required>--%>
-    <%--    <br>--%>
-    <%--    new news:<textarea cols="8" rows="20" name="news">介绍一下自己</textarea>--%>
-
-    <%--    <br>--%>
     <div class="input-group input-group-lg">
         <div class="input-group-prepend">
             <span class="input-group-text" id="inputGroup-sizing-lg">编辑新的标题</span>
@@ -45,10 +40,19 @@
             <span class="input-group-text">编辑新闻</span>
         </div>
         <textarea class="form-control" aria-label="With textarea" rows="5" name="news"></textarea>
+
     </div>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <input type="file" class="form-control-file" id="inputImage" accept="image/png,image/jpg,image/gif" name="photoo" required>
+            </div>
+
+        </div>
         <button type="submit" class="ts">添加</button>
 </form>
+<script>
 
+</script>
 </body>
 </html>
 
